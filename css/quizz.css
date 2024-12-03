@@ -1,0 +1,18 @@
+
+.quiz-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.question {
+    margin-bottom: 10px;
+}
+.answer {
+    margin-left: 20px;
+    display: block;
+    cursor: pointer;
+}
+
+.result {
+    margin-top: 20px;
+    font-weight: bold;
+}
