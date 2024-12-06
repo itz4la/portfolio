@@ -142,33 +142,55 @@ function checkAllAnswered() {
 // Calculate and display result using SweetAlert2
 function submitQuiz() {
     let score = 0;
+    const answers = []; // To store the user's answers for result checking
 
+    // Calculate score and save user answers
     quizQuestions.forEach((item, index) => {
         const selectedOption = document.querySelector(`input[name="question${index}"]:checked`);
+        answers.push(selectedOption ? parseInt(selectedOption.value) : null);
         if (selectedOption && parseInt(selectedOption.value) === item.answer) {
             score++;
         }
     });
 
-    if (score == quizQuestions.length){
-    // Display result with SweetAlert2
     Swal.fire({
-    title: 'Bravo !',
-    text: `Votre score est de ${score} sur ${quizQuestions.length}.`,
-    icon: 'success',
-    confirmButtonText: 'OK'
+        title: score === quizQuestions.length ? 'Bravo !' : 'Oops...!',
+        text: `Votre score est de ${score} sur ${quizQuestions.length}.`,
+        icon: score === quizQuestions.length ? 'success' : 'error',
+        confirmButtonText: 'Voir Résultat',
+        showCancelButton: true,
+        cancelButtonText: 'Recommencer'
+    }).then((result) => {
+        if (result.isConfirmed) {
+            // Highlight the answers (Check Result)
+            checkResults(answers);
+        } else if (result.dismiss === Swal.DismissReason.cancel) {
+            // Restart the quiz
+            restartQuiz();
+        }
     });
-    }else{
-        Swal.fire({
-            icon: "error",
-            title: "Oops...!",
-            text: `Votre score est de ${score} sur ${quizQuestions.length}.`,
-            confirmButtonText: 'OK'
-            });
-    }
-
-    
 }
+
+function checkResults(answers) {
+    quizQuestions.forEach((item, index) => {
+        const questionDiv = document.querySelectorAll('.question')[index];
+        const userAnswer = answers[index];
+
+        if (userAnswer === item.answer) {
+            questionDiv.classList.add('correct'); // Green for correct
+        } else {
+            questionDiv.classList.add('incorrect'); // Red for incorrect
+        }
+    });
+}
+
+function restartQuiz() {
+    const quizForm = document.getElementById("quiz-form");
+    quizForm.innerHTML = ""; // Clear all questions
+    generateQuiz(); // Regenerate the quiz
+    document.getElementById("submit-btn").disabled = true; // Disable the Submit button
+}
+
 
 // Initialize quiz on page load
 window.onload = generateQuiz;

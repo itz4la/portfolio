@@ -74,3 +74,15 @@
   .contact .php-email-form button[type=submit]:hover {
     background: color-mix(in srgb, var(--accent-color), transparent 25%);
   }
+
+  .send-mail a{
+    background-color: var(--accent-color);
+    color: var(--contrast-color);
+    padding: 10px 15px;
+  }
+
+  .send-mail a:hover{
+    background-color: var(--nav-hover-color);
+    color: var(--contrast-color);
+    padding: 10px 15px;
+  }
