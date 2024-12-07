@@ -1,106 +1,107 @@
 // Questions array
 const quizQuestions = [
     {
-        question: "Pourquoi est-il important d’utiliser des noms de variables explicites ?",
+        question: "Why is it important to use descriptive variable names?",
         options: [
-            "Pour améliorer la performance du code",
-            "Pour rendre le code impressionnant",
-            "Pour rendre le code plus facile à lire et à comprendre",
-            "Pour minimiser le temps de frappe"
+            "To improve code performance",
+            "To make the code impressive",
+            "To make the code easier to read and understand",
+            "To minimize typing time"
         ],
         answer: 2
     },
     {
-        question: "Laquelle des affirmations suivantes est une bonne pratique pour écrire des commentaires dans le code ?",
+        question: "Which of the following is a good practice for writing comments in code?",
         options: [
-            "Écrire des commentaires pour chaque ligne de code",
-            "Utiliser des commentaires pour expliquer pourquoi un code complexe est écrit, pas ce qu’il fait",
-            "Utiliser des commentaires pour critiquer le code d’autres développeurs",
-            "Éviter tous les commentaires ; le code doit être auto-explicatif"
+            "Write comments for every line of code",
+            "Use comments to explain why complex code is written, not what it does",
+            "Use comments to criticize other developers' code",
+            "Avoid all comments; the code should be self-explanatory"
         ],
         answer: 1
     },
     {
-        question: "Quel est le but de suivre le principe DRY (Don’t Repeat Yourself) ?",
+        question: "What is the purpose of following the DRY (Don't Repeat Yourself) principle?",
         options: [
-            "Réduire la duplication de code et améliorer la maintenabilité",
-            "Améliorer la performance du code",
-            "Éviter d’utiliser des fonctions",
-            "Rendre le code plus court"
+            "To reduce code duplication and improve maintainability",
+            "To enhance code performance",
+            "To avoid using functions",
+            "To make the code shorter"
         ],
         answer: 0
     },
     {
-        question: "Laquelle des affirmations suivantes N’EST PAS une bonne pratique de codage pour la gestion des erreurs ?",
+        question: "Which of the following is NOT a good coding practice for error handling?",
         options: [
-            "Ignorer les exceptions pour une exécution plus rapide",
-            "Capturer et enregistrer les erreurs",
-            "Utiliser des messages d’erreur explicites",
-            "Mettre en œuvre des mécanismes de récupération d’erreurs élégants"
+            "Ignore exceptions for faster execution",
+            "Catch and log errors",
+            "Use clear error messages",
+            "Implement elegant error recovery mechanisms"
         ],
         answer: 0
     },
     {
-        question: "Quel est l’avantage d’écrire des tests unitaires ?",
+        question: "What is the benefit of writing unit tests?",
         options: [
-            "Les tests unitaires réduisent la quantité de code à écrire",
-            "Les tests unitaires aident à détecter les bugs tôt et améliorent la qualité du code",
-            "Les tests unitaires éliminent le besoin de tests manuels",
-            "Les tests unitaires rendent le code plus rapide"
+            "Unit tests reduce the amount of code to write",
+            "Unit tests help catch bugs early and improve code quality",
+            "Unit tests eliminate the need for manual testing",
+            "Unit tests make the code faster"
         ],
         answer: 1
     },
     {
-        question: "Pourquoi devriez-vous garder les fonctions courtes et axées sur une seule tâche ?",
+        question: "Why should functions be short and focused on a single task?",
         options: [
-            "Cela rend le code plus propre",
-            "Cela rend les fonctions plus faciles à réutiliser et à tester",
-            "C’est plus efficace pour le compilateur",
-            "Cela réduit l’utilisation de la mémoire"
+            "It makes the code cleaner",
+            "It makes functions easier to reuse and test",
+            "It's more efficient for the compiler",
+            "It reduces memory usage"
         ],
         answer: 1
     },
     {
-        question: "Quel principe encourage à limiter la visibilité des données uniquement à ce qui est nécessaire ?",
+        question: "Which principle encourages limiting data visibility to only what is necessary?",
         options: [
-            "Principe SOLID",
-            "Principe DRY",
+            "SOLID principle",
+            "DRY principle",
             "Encapsulation",
-            "Programmation orientée objet"
+            "Object-oriented programming"
         ],
         answer: 2
     },
     {
-        question: "Quel est l’objectif du refactoring de code ?",
+        question: "What is the goal of code refactoring?",
         options: [
-            "Ajouter de nouvelles fonctionnalités",
-            "Améliorer la conception, la structure et la lisibilité du code sans changer son comportement",
-            "Supprimer les bugs",
-            "Optimiser le code pour une exécution plus rapide"
+            "To add new features",
+            "To improve the design, structure, and readability of code without changing its behavior",
+            "To remove bugs",
+            "To optimize code for faster execution"
         ],
         answer: 1
     },
     {
-        question: "Quelle affirmation à propos des revues de code est vraie ?",
+        question: "Which statement about code reviews is true?",
         options: [
-            "Les revues de code sont inutiles si le développeur est expérimenté",
-            "Les revues de code ne servent qu’à trouver des erreurs de syntaxe",
-            "Les revues de code aident à identifier des problèmes potentiels et favorisent le partage de connaissances",
-            "Les revues de code ralentissent le processus de développement"
+            "Code reviews are unnecessary if the developer is experienced",
+            "Code reviews are only for finding syntax errors",
+            "Code reviews help identify potential issues and foster knowledge sharing",
+            "Code reviews slow down the development process"
         ],
         answer: 2
     },
     {
-        question: "Quel est l’avantage des systèmes de contrôle de version (comme Git) ?",
+        question: "What is the advantage of version control systems (like Git)?",
         options: [
-            "Ils permettent de garder le code dans une seule version sans aucune sauvegarde",
-            "Ils permettent à plusieurs développeurs de collaborer et de suivre efficacement les changements",
-            "Ils éliminent le besoin de sauvegardes",
-            "Ils augmentent la vitesse d’exécution du code"
+            "They keep the code in a single version without any backups",
+            "They allow multiple developers to collaborate and track changes effectively",
+            "They eliminate the need for backups",
+            "They increase code execution speed"
         ],
         answer: 1
     }
 ];
+
 
 
 // Generate the quiz
